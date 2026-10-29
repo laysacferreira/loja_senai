@@ -73,6 +73,5 @@ include 'topo.php';
 </div>
  
 <h1>Bem-vindo à Minha Loja!</h1>
-<p>Se aparecem o logo, o menu e o rodapé, os includes funcionaram.</p>
  
 <?php include 'rodape.php'; ?>
