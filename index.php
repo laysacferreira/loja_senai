@@ -22,7 +22,7 @@ include 'topo.php';
  
 <div class="painel">
     <div class="numero">
-        <img src="assets/imagens/clientes.png" alt="">
+        <img src="assets/imagens/icone-clientes.png" alt="">
         <div>
             <div class="valor"><?= $total_clientes ?></div>
             <div class="rotulo">clientes</div>
@@ -30,7 +30,7 @@ include 'topo.php';
     </div>
  
     <div class="numero">
-        <img src="assets/imagens/produto.png" alt="">
+        <img src="assets/imagens/icone-produto.png" alt="">
         <div>
             <div class="valor"><?= $total_produtos ?></div>
             <div class="rotulo">produtos</div>
@@ -38,7 +38,7 @@ include 'topo.php';
     </div>
  
     <div class="numero">
-        <img src="assets/imagens/vendas.png" alt="">
+        <img src="assets/imagens/icone-vendas.png" alt="">
         <div>
             <div class="valor"><?= $total_vendas ?></div>
             <div class="rotulo">vendas</div>
