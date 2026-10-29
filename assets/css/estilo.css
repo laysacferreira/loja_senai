@@ -1,0 +1,518 @@
+* {
+    box-sizing: border-box;
+}
+ 
+body {
+    margin: 0;
+    background: #f3f5f9;
+    color: #1d2433;
+    font-family: "Segoe UI", Arial, sans-serif;
+    font-size: 16px;
+}
+ 
+.pagina {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
+}
+ 
+/* CABEÇALHO */
+ 
+.topo {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    gap: 24px;
+    padding: 14px 32px;
+    background: #1f2a44;
+}
+ 
+.logo {
+    display: grid;
+    grid-template-columns: 44px auto;
+    align-items: center;
+    gap: 10px;
+    color: #ffffff;
+    font-size: 22px;
+    font-weight: bold;
+    text-decoration: none;
+}
+ 
+.logo img {
+    width: 44px;
+    height: 44px;
+    object-fit: contain;
+}
+ 
+.menu {
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: end;
+    gap: 6px;
+}
+ 
+.menu a {
+    padding: 8px 14px;
+    border-radius: 8px;
+    color: #c9d3e6;
+    text-decoration: none;
+}
+ 
+.menu a:hover {
+    background: #2d3b5c;
+    color: #ffffff;
+}
+ 
+.menu a.ativo {
+    background: #f28c28;
+    color: #1f2a44;
+    font-weight: bold;
+}
+ 
+/* CONTEÚDO */
+ 
+.conteudo {
+    display: grid;
+    align-content: start;
+    gap: 20px;
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 28px 32px;
+}
+ 
+h1 {
+    margin: 0;
+    font-size: 28px;
+}
+ 
+p {
+    margin: 0;
+}
+ 
+/* RODAPÉ */
+ 
+.rodape {
+    padding: 16px 32px;
+    background: #1f2a44;
+    color: #c9d3e6;
+    font-size: 14px;
+    text-align: center;
+}
+ 
+/* BOTÕES */
+ 
+.botao {
+    display: inline-block;
+    padding: 10px 18px;
+    border: 0;
+    border-radius: 8px;
+    background: #f28c28;
+    color: #1f2a44;
+    font-family: inherit;
+    font-size: 15px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+}
+ 
+.botao:hover {
+    background: #e07a14;
+}
+ 
+.botao.pequeno {
+    padding: 6px 12px;
+    font-size: 13px;
+}
+ 
+.botao.perigo {
+    background: #d64541;
+    color: #ffffff;
+}
+ 
+.botao.perigo:hover {
+    background: #b9322f;
+}
+ 
+.botao.claro {
+    background: #e6e9f0;
+    color: #1d2433;
+}
+ 
+.botao.claro:hover {
+    background: #d5dae5;
+}
+ 
+/* TÍTULO DAS PÁGINAS */
+ 
+.titulo-pagina {
+    display: grid;
+    grid-template-columns: 240px auto;
+    align-items: center;
+    gap: 8px;
+}
+ 
+/* PAINEL INICIAL */
+ 
+.painel {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+}
+ 
+.numero {
+    display: grid;
+    grid-template-columns: 56px 1fr;
+    align-items: center;
+    gap: 14px;
+    padding: 16px;
+    border-radius: 12px;
+    background: #ffffff;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+ 
+.numero img {
+    width: 56px;
+    height: 56px;
+    object-fit: contain;
+}
+ 
+.numero .rotulo {
+    color: #5b5b5b;
+}
+ 
+/* BUSCA */
+ 
+.busca {
+    display: flex;
+    gap: 8px;
+}
+ 
+.busca input {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #c8c8c8;
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 15px;
+}
+ 
+/* VITRINE DE PRODUTOS */
+ 
+.vitrine {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 20px;
+}
+ 
+.card {
+    display: grid;
+    grid-template-rows: auto auto 1fr auto;
+    gap: 8px;
+    padding: 18px;
+    border-radius: 12px;
+    background: #ffffff;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+ 
+.card img {
+    justify-self: center;
+    width: 120px;
+    height: 120px;
+    object-fit: contain;
+}
+ 
+.card h2 {
+    margin: 0;
+    font-size: 18px;
+}
+ 
+.card p {
+    color: #5b6478;
+    font-size: 14px;
+}
+ 
+.preco {
+    color: #c25e00;
+    font-size: 22px;
+    font-weight: bold;
+}
+ 
+/* AVISOS */
+ 
+.aviso {
+    padding: 12px 16px;
+    border-radius: 8px;
+    background: #dff3e6;
+    color: #1d6b3a;
+}
+ 
+.aviso.erro {
+    background: #fde2e1;
+    color: #a12622;
+}
+ 
+/* TABELAS */
+ 
+.tabela {
+    overflow-x: auto;
+    border-radius: 12px;
+    background: #ffffff;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+ 
+.tabela table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: auto;
+}
+ 
+.tabela th,
+.tabela td {
+    padding: 12px 16px;
+    border-bottom: 1px solid #e6e9f0;
+    text-align: left;
+    vertical-align: middle;
+}
+ 
+.tabela th {
+    background: #f7f8fb;
+    color: #5b6478;
+    font-size: 13px;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+ 
+.tabela tr:last-child td {
+    border-bottom: none;
+}
+ 
+.tabela td {
+    white-space: nowrap;
+}
+ 
+/* COLUNA DO CLIENTE */
+ 
+.tabela td:nth-child(2) {
+    min-width: 130px;
+    white-space: normal;
+}
+ 
+/* COLUNA DO PRODUTO */
+ 
+.tabela td:nth-child(3) {
+    min-width: 220px;
+    white-space: normal;
+}
+ 
+/* IMAGEM E NOME DO PRODUTO NA TABELA */
+ 
+.produto-celula {
+    display: grid;
+    grid-template-columns: 36px 1fr;
+    align-items: center;
+    gap: 10px;
+}
+ 
+.produto-celula img {
+    display: block;
+    width: 36px;
+    min-width: 36px;
+    max-width: 36px;
+    height: 36px;
+    min-height: 36px;
+    max-height: 36px;
+    object-fit: contain;
+}
+ 
+/* IMAGEM E NOME DO PRODUTO NAS VENDAS */
+ 
+.produto-celular {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    min-width: 180px;
+}
+ 
+.produto-celular img {
+    display: block;
+    width: 36px;
+    min-width: 36px;
+    max-width: 36px;
+    height: 36px;
+    min-height: 36px;
+    max-height: 36px;
+    object-fit: contain;
+    border-radius: 6px;
+    flex-shrink: 0;
+}
+ 
+/* BOTÕES DE AÇÃO DA TABELA */
+ 
+.acoes-tabela {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 6px;
+}
+ 
+.tabela .acoes-tabela .botao {
+    white-space: nowrap;
+}
+ 
+/* CONTADOR */
+ 
+.contador {
+    color: #5b6478;
+    font-size: 14px;
+}
+ 
+/* FORMULÁRIOS */
+ 
+.caixa {
+    display: grid;
+    gap: 18px;
+    max-width: 620px;
+    padding: 24px;
+    border-radius: 12px;
+    background: #ffffff;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+ 
+.formulario {
+    display: grid;
+    gap: 6px;
+}
+ 
+.campo {
+    display: grid;
+    gap: 6px;
+}
+ 
+.campo input,
+.campo select {
+    padding: 10px 12px;
+    border: 1px solid #c8cfdc;
+    border-radius: 8px;
+    background: #ffffff;
+    font-family: inherit;
+    font-size: 15px;
+}
+ 
+.campo textarea {
+    padding: 10px 12px;
+    border: 1px solid #c8cfdc;
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 15px;
+    resize: vertical;
+}
+ 
+.acoes {
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: start;
+    gap: 10px;
+}
+ 
+.dica {
+    color: #5b6478;
+    font-size: 13px;
+}
+ 
+/* IMAGENS DE PRODUTOS NOS FORMULÁRIOS */
+ 
+.miniatura {
+    width: 52px;
+    height: 52px;
+    object-fit: contain;
+}
+ 
+.nome-produto {
+    font-weight: bold;
+}
+ 
+.descricao-produto {
+    color: #5b6478;
+    font-size: 14px;
+}
+ 
+.previa {
+    width: 120px;
+    height: 120px;
+    padding: 8px;
+    border: 1px dashed #c8cfdc;
+    border-radius: 10px;
+    object-fit: contain;
+}
+ 
+/* TOTAL GERAL */
+ 
+.total-geral {
+    justify-self: end;
+    padding: 12px 18px;
+    border-radius: 10px;
+    background: #1f2a44;
+    color: #ffffff;
+    font-size: 17px;
+}
+ 
+/* RESUMO DA VENDA */
+ 
+.resumo {
+    display: grid;
+    gap: 6px;
+    padding: 14px 16px;
+    border-radius: 8px;
+    background: #f3f5f9;
+}
+ 
+/* PRODUTOS EM TELAS MENORES */
+ 
+@media (max-width: 768px) {
+    .topo {
+        grid-template-columns: 1fr;
+        gap: 12px;
+        padding: 14px 18px;
+    }
+ 
+    .menu {
+        grid-auto-flow: row;
+        grid-template-columns: repeat(2, 1fr);
+        justify-content: stretch;
+    }
+ 
+    .menu a {
+        text-align: center;
+    }
+ 
+    .conteudo {
+        padding: 20px 16px;
+    }
+ 
+    .titulo-pagina {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+ 
+    .painel {
+        grid-template-columns: 1fr;
+    }
+ 
+    .tabela {
+        overflow-x: auto;
+    }
+ 
+    .tabela table {
+        min-width: 700px;
+    }
+ 
+    .caixa {
+        padding: 18px;
+    }
+ 
+    .acoes {
+        grid-auto-flow: row;
+    }
+}
