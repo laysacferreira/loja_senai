@@ -1,18 +1,24 @@
 <?php
  
-$arquivo_banco = '/banco/loja.db';
+$arquivo_banco = 'banco/loja.db';
  
 if (!file_exists($arquivo_banco)) {
+
     die('Banco não encontrado em: ' . $arquivo_banco);
+
 }
  
 try {
+
     $pdo = new PDO('sqlite:' . $arquivo_banco);
  
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
     $pdo->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
  
 } catch (PDOException $erro) {
+
     die('Erro ao conectar com o banco: ' . $erro->getMessage());
+
 }
  
