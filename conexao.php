@@ -1,6 +1,6 @@
 <?php
  
-$arquivo_banco = __DIR__ . '/banco/loja.db';
+$arquivo_banco = '/banco/loja.db';
  
 if (!file_exists($arquivo_banco)) {
     die('Banco não encontrado em: ' . $arquivo_banco);
